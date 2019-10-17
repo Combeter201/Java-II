@@ -28,7 +28,7 @@ public class PersonTest
 		}
 		catch(RuntimeException e)
 		{
-			if(!e.getMessage().equals("Firstname has to start with a capital Letter"))fail();
+			assertEquals(e.getMessage(),("Firstname has to start with a capital Letter"));
 		}
 	}
 	
@@ -42,7 +42,8 @@ public class PersonTest
 		}
 		catch(RuntimeException e)
 		{
-			if(!e.getMessage().equals("Street and Place have to start with a capital Letter"))fail();
+			
+			assertEquals(e.getMessage(),("Street and Place have to start with a capital Letter"));
 		}
 	}
 	
@@ -56,7 +57,7 @@ public class PersonTest
 		}
 		catch(RuntimeException e)
 		{
-			if(!e.getMessage().equals("Street and Place have to start with a capital Letter"))fail();
+			assertEquals(e.getMessage(),("Street and Place have to start with a capital Letter"));
 		}
 	}
 	
@@ -79,7 +80,7 @@ public class PersonTest
 		}
 		catch(RuntimeException e)
 		{
-			if(!e.getMessage().equals("Housenumber has to start with a number"))fail();
+			assertEquals(e.getMessage(),("Housenumber has to start with a number"));
 		}
 	}
 }
